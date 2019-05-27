@@ -1,6 +1,5 @@
 package com.example.weatherapp.home.forecast;
 
-import android.util.Log;
 
 import com.example.weatherapp.App;
 import com.example.weatherapp.base.BasePresenter;
@@ -45,7 +44,6 @@ public class ForecastPresenter extends BasePresenter<ForecastView> {
 
         @Override
         public void onError(Throwable e) {
-            Log.d("LAZAR", e.getMessage());
         }
 
         @Override

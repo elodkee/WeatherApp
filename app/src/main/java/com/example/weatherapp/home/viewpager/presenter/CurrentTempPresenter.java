@@ -1,12 +1,11 @@
 package com.example.weatherapp.home.viewpager.presenter;
 
-import android.util.Log;
+
 
 import com.example.weatherapp.App;
 import com.example.weatherapp.base.BasePresenter;
 import com.example.weatherapp.data.api.DataLoader;
 import com.example.weatherapp.data.model.ForecastResult;
-import com.example.weatherapp.home.forecast.ForecastPresenter;
 import com.example.weatherapp.home.viewpager.view.CurrentTempView;
 
 import javax.inject.Inject;
@@ -47,7 +46,6 @@ public class CurrentTempPresenter extends BasePresenter<CurrentTempView> {
 
         @Override
         public void onError(Throwable e) {
-            Log.d("LAZAR", e.getMessage());
         }
 
         @Override

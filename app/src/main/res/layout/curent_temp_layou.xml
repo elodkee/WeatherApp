@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/homeColor">
+
+
+    <TextView
+        android:id="@+id/tv_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/city_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_popular_restaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_shape"
+        android:gravity="center"
+        android:paddingStart="15dp"
+        android:paddingTop="7dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="7dp"
+        android:text="@string/popular_restaurant"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_city_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_city_name" />
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/colorSecondText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_city_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_city_name" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/colorSecondText"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_day"
+        app:layout_constraintTop_toBottomOf="@+id/tv_day" />
+
+    <ImageView
+        android:id="@+id/iv_temp_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ttt"
+        app:layout_constraintStart_toStartOf="@+id/tv_description"
+        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+    <TextView
+        android:id="@+id/tv_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="37"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_popular_restaurant"
+        app:layout_constraintStart_toEndOf="@id/iv_temp_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_temp_icon" />
+
+    <TextView
+        android:id="@+id/tv_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="°C"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/tv_temp"
+        app:layout_constraintTop_toTopOf="@+id/iv_temp_icon" />
+
+    <TextView
+        android:id="@+id/tv_f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="°F"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/tv_c"
+        app:layout_constraintTop_toTopOf="@+id/iv_temp_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@+id/iv_temp_icon">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_precipitation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_text_percip"
+                app:layout_constraintEnd_toEndOf="@id/tv_text_percip"
+                app:layout_constraintStart_toStartOf="@id/tv_text_percip" />
+
+            <TextView
+                android:id="@+id/tv_caracter_prec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_precipitation"
+                android:layout_toEndOf="@+id/tv_precipitation"
+                android:text="%"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_text_percip"
+                app:layout_constraintStart_toEndOf="@id/tv_precipitation" />
+
+            <TextView
+                android:id="@+id/tv_text_percip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/PRECIPITATION"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_text_humidity"
+                app:layout_constraintEnd_toEndOf="@id/tv_text_humidity"
+                app:layout_constraintStart_toStartOf="@id/tv_text_humidity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_text_humidity"
+                app:layout_constraintStart_toEndOf="@id/tv_humidity" />
+
+            <TextView
+                android:id="@+id/tv_text_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/HUMIDITY"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_wind_simbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Km/h"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_text_wind"
+                app:layout_constraintStart_toEndOf="@id/tv_wind" />
+
+            <TextView
+                android:id="@+id/tv_text_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/WIND"
+                android:textColor="@color/colorPrimaryText"
+
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tv_wind_simbol"
+                app:layout_constraintStart_toStartOf="@id/tv_wind"
+                app:layout_constraintTop_toBottomOf="@+id/tv_wind" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
